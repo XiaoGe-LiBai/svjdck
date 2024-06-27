@@ -58,12 +58,12 @@ async def ifconfigfile():                           #判断有没有配置文件
     configfile = 'jdck.ini'     #配置文件名称为
     if not os.path.exists(configfile):     #看看有没有配置文件
         configdata = [
-'Displaylogin=0  #是否显示登录操作，1显示，0不显示\n',
-'qlip=http://192.168.1.1:5700\n',
-'client_id=*******\n',
-'client_secret=*******\n',
-'517123248#ya21udb95#我是备注1\n',
-'15611167798#123456789#我是备注2\n',
+'Displaylogin=0  #是否显示登录操作，1显示，0不显示\n'，
+'qlip=http://192.168.1.1:5700\n'，
+'client_id=*******\n'，
+'client_secret=*******\n'，
+'517123248#ya21udb95#我是备注1\n'，
+'15611167798#123456789#我是备注2\n'，
 ]
         with open(configfile, 'w', encoding='utf-8') as file:     #打开配置文件
             file.writelines(configdata)       #写入configdata的内容到配置文件
@@ -137,7 +137,7 @@ async def init_chrome():        #判断chrome是否存在，不存在则下载�
         else:
             print('貌似第一次使用，未找到chrome，正在下载chrome浏览器....')
             print('文件位于github，请耐心等待，如遇到网络问题可到项目地址手动下载')
-            download_url = "https://github.com/dsmggm/svjdck/releases/download/jdck/chrome-linux.zip"
+            download_url = "https://mirrors.huaweicloud.com/chromium-browser-snapshots/Linux_x64/884014/chrome-linux.zip"
             if not os.path.exists(download_path):       #如果没有路径就创建路径
                 os.makedirs(download_path, exist_ok=True)  # 创建下载路径
             target_file = os.path.join(download_path, 'chrome-linux.zip')  # 定义下载文件路径跟文件名
